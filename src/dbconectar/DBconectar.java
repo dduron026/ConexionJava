@@ -31,6 +31,11 @@ public class DBconectar {
         } catch (SQLException e) {
             System.err.print(e);
         }
+        finally{
+            if(con != null){
+                con.close();
+            }
+        }
     }
     
 }
